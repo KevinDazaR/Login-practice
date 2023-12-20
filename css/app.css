@@ -1,0 +1,178 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing:border-box;
+}
+
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+&::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: rgb(40, 36, 107);
+    background: linear-gradient(90deg, rgb(45, 42, 104) 0%, rgb(46, 46, 148) 47%, rgb(40, 40, 139) 98%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#login-section{
+    width: 420px;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: rgba(15, 11, 94, 0.329);
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#label-signUp{
+    color: white;
+    width: 100%;
+    font-size: 42px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#signUp-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#signUp-form input{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+
+#signUp-form button{
+    width: 40%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgb(40, 209, 110);
+    border: 0px solid white;
+    color: white;
+}
+
+#signUp-form button:hover{
+    cursor: pointer;
+    background-color: rgb(39, 173, 95);
+}
+
+
+/*login */
+
+
+.login-form-box{
+    width: 100%;
+    height: 320px;
+    padding: 0px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24% 24% 0% 0%;
+    background: white;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+}
+
+
+.login-form-box label{
+    color: rgb(15, 11, 94);
+    width: 100%;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#login-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#login-form input{
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 8px;
+    border: 1px solid rgb(46, 46, 46);
+}
+
+#login-form button{
+    width: 40%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgb(40, 209, 110);
+    border: 0px solid white;
+    color: white;
+}
+
+#login-form button:hover{
+    cursor: pointer;
+    background-color: rgb(39, 173, 95);
+}
+
+
+.login-form-box:hover{
+   top: 35%;
+   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+   transition-duration: 1s;
+}
