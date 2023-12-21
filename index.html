@@ -14,13 +14,16 @@
         <form action="" id="signUp-form">
 
             <input id="nameText" required 
-            type="text" placeholder="User name">
+            type="text" placeholder="User name" value="Kevin">
+            <div id="invalid-feedback1">enter a valid data</div>
 
-            <input id="emailText" required type="email" placeholder="Email">
-            x
-            <input id="passwordText" required type="password" placeholder="password">
-            
-            <button type="button" onclick="singUp()" >Sign Up</button>
+            <input id="emailText" required type="email" placeholder="Email" value="kdaza@riwio.io">
+            <div id="invalid-feedback2">enter a valid email</div>
+
+            <input id="passwordText" required type="password" placeholder="password" >
+            <div id="invalid-feedback3">It must to include as minimun 8 characthers and a special one like *,-,0</div>
+
+            <button type="button" id="button-singUp" >Sign Up</button>
 
         </form>
 
