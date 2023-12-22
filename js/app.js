@@ -1,26 +1,9 @@
-// let usuarios = [];
 
-
-// function singUp(){
-
-//     let userNameValue = document.getElementBy("nameText").value;
-
-//     let userEmailValue =document.getElementById("emailText").value;
-    
-//     let userPasswordValue =document.getElementById("passwordText");
-    
-//     console.log(userPasswordValue.value)
-
-//     
-
-//     usuarios.push(usuario);
-    
-//     console.log(usuario.name)
-
-// }
-
-
-let usuarios = [];
+const LISTA_USUARIO = [
+    { nombre: "Jose", mail: "joseLuis@gmail.com", password: "jose123" },
+    { nombre: "Manuel", mail: "manuelAlejandro@gmail.com", password: "mauel123" },
+    { nombre: "Luis", mail: "luisAlvarez@gmail.com", password: "luis123" }
+];
 
 let usuario = {
     name: '',
@@ -41,22 +24,10 @@ let btnSingUp = document.getElementById('button-singUp');
 
 var datoInvalidoFunction;
 
+let contadorValidoSingUp = 0;
+
+/* REGISTER SECTION */
 btnSingUp.addEventListener("click",function singUp(){
-
-
-    /* validar si el input no es vacìo, enviar formulario */
-
-    if((userNameValue.value !=="") && (userEmailValue.value !=="") && (userPasswordValue.value !=="")){
-        usuario.name = userNameValue.value;
-        usuario.email = userEmailValue.value;
-        usuario.password = userPasswordValue.value;
-        console.log(usuario);
-        datoInvalido();
-    }
-
-    else{
-        borrarDatosInput();
-    }
 
 
     /* si es invàlido o vacìo el dato */
@@ -89,12 +60,11 @@ btnSingUp.addEventListener("click",function singUp(){
     function datoValido(){
 /* ARREGLAR EL VALIDAR EMAIL*/
 
-       console.log(validarEmail.test(userEmailValue.value));
-
         if (userNameValue.value !==""){
             userNameValue.classList.remove("invalid");
             userNameValue.classList.add("valid");
             invalidData1.style.display = "none";
+            contadorValidoSingUp =+ 1;
         }
 /* ARREGLAR EL VALIDAR EMAIL*/
 
@@ -103,7 +73,7 @@ btnSingUp.addEventListener("click",function singUp(){
             userEmailValue.classList.remove("invalid");
             userEmailValue.classList.add("valid");
             invalidData2.style.display = "none";
-            console.log(validarEmail.test(userEmailValue.value));
+            contadorValidoSingUp += 1;
             
         }
 
@@ -119,55 +89,89 @@ btnSingUp.addEventListener("click",function singUp(){
             userEmailValue.classList.remove("valid")
             userEmailValue.classList.add("invalid");
             console.log(validarEmail.test(userEmailValue.value));
+            contadorValidoSingUp += 1;
         }
 
         if (userPasswordValue.value !==""){
             userPasswordValue.classList.remove("invalid");
             userPasswordValue.classList.add("valid");
             invalidData3.style.display = "none";
-    }
-
+            contadorValidoSingUp += 1;
+    }   
+        if(contadorValidoSingUp == 3){
+            enterLogin();
+        }
+            
     }
 
     function borrarDatosInput(){
         
-        userNameValue.value = "";
-        userEmailValue.value = "";
-        userPasswordValue.value = "";
-        userNameValue.classList.remove("valid");
-        userNameValue.classList.remove("invalid");
-        userEmailValue.classList.remove("valid");
-        userEmailValue.classList.remove("invalid");
-        userPasswordValue.classList.remove("valid");
-        userPasswordValue.classList.remove("invalid");
-        invalidData1.style.display = "none";
-        invalidData2.style.display = "none";
-        invalidData3.style.display = "none";
+        if(contadorValidoSingUp == 3){
+            userNameValue.value = "";
+            userEmailValue.value = "";
+            userPasswordValue.value = "";
+            userNameValue.classList.remove("valid");
+            userNameValue.classList.remove("invalid");
+            userEmailValue.classList.remove("valid");
+            userEmailValue.classList.remove("invalid");
+            userPasswordValue.classList.remove("valid");
+            userPasswordValue.classList.remove("invalid");
+            invalidData1.style.display = "none";
+            invalidData2.style.display = "none";
+            invalidData3.style.display = "none";
+        }
+        
 
     }
 
     datoValido();
-    datoInvalido();
-    // enterLogin();
+
+    function enterLogin(){
+        alert("Registro Exitoso!")
+        let formBoxLogin = document.getElementById("login-form-box");
+        formBoxLogin.style.top = "32%";
     
+    }
 
+    /* validar si el input no es vacìo, enviar formulario */
 
+    if((userNameValue.value !=="") && (userEmailValue.value !=="") && (userPasswordValue.value !=="")){
+        usuario.name = userNameValue.value;
+        usuario.email = userEmailValue.value;
+        usuario.password = userPasswordValue.value;
+        console.log(usuario);
+        borrarDatosInput();
+        
+    }
 
+    else{
+        datoInvalido();
+    }
+    
+    LISTA_USUARIO.push(usuario);
+    
+    console.log()
     
 
 })
 
-
-function enterLogin(){
-    let formBoxLogin = document.getElementById("login-form-box");
-    formBoxLogin.style.top = "32%";
-    console.log(formBoxLogin);
-    console.log("LOGFORM")
+/*---------- LOGIN -----------*/
+let btnLogin = document.getElementById("button-login");
+let loginName = document.getElementById("nameTextLogin")
+let loginPassword = document.getElementById("nameTextSingUp");
 
 
+btnLogin.addEventListener("click",function login(event){
+    event.preventDefault()
+    console.log("a")
 
-}
+    LISTA_USUARIO.forEach((person) => {
+        if()
 
+    })
+    /* COMPARAR OBJETO NAME CON LOGIN NAME */
+
+}) 
 
 
 /* PRUEBA PONER Y QUITAR CLASE QUE INFORME*/
