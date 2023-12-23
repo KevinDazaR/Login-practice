@@ -1,8 +1,8 @@
 
 const LISTA_USUARIO = [
-    { nombre: "Jose", mail: "joseLuis@gmail.com", password: "jose123" },
-    { nombre: "Manuel", mail: "manuelAlejandro@gmail.com", password: "mauel123" },
-    { nombre: "Luis", mail: "luisAlvarez@gmail.com", password: "luis123" }
+    { name: "Jose", email: "joseLuis@gmail.com", password: "jose123" },
+    { name: "Manuel", email: "manuelAlejandro@gmail.com", password: "mauel123" },
+    { name: "Luis", email: "luisAlvarez@gmail.com", password: "luis123" }
 ];
 
 let usuario = {
@@ -140,7 +140,7 @@ btnSingUp.addEventListener("click",function singUp(){
         usuario.email = userEmailValue.value;
         usuario.password = userPasswordValue.value;
         console.log(usuario);
-        borrarDatosInput();
+         borrarDatosInput();
         
     }
 
@@ -163,12 +163,19 @@ let loginPassword = document.getElementById("nameTextSingUp");
 
 btnLogin.addEventListener("click",function login(event){
     event.preventDefault()
-    console.log("a")
+    console.log(LISTA_USUARIO)
 
-    LISTA_USUARIO.forEach((person) => {
-        if()
-
-    })
+    LISTA_USUARIO.forEach(function(person){
+        if(person.email === loginName.value && person.password === loginPassword.value){
+            console.log("Inicio exitoso");
+        }
+        else if(person.email != loginName.value || person.password != loginPassword.value){
+            console.log("Usuario o contraseña invàlido, intente de nuevo")
+        }
+        else{
+            console.log("Usuario invàlido")
+        }
+    });
     /* COMPARAR OBJETO NAME CON LOGIN NAME */
 
 }) 
