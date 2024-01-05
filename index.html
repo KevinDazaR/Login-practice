@@ -8,7 +8,7 @@
     <script src="js/app.js" defer></script>
 </head>
 <body>
-    <section id="login-section">
+    <section id="login-section" onclick="clickLogin()">
 
         <label for="signUp-form" id="label-signUp">Sign Up</label>
         <form action="" id="signUp-form">
@@ -23,6 +23,13 @@
             <input id="passwordText" required type="password" placeholder="password" >
             <div id="invalid-feedback3">It must to include as minimun 8 characthers and a special one like *,-,0</div>
 
+            <select name="" id="genderSelect">
+                <option value="default" selected disabled> Select your gender</option>
+                <option id="female" value="female">Female</option>
+                <option id="male" value="male">Male</option>
+                <option id="other" value="other">Other</option>
+            </select>
+
             <button type="button" id="button-singUp" >Sign Up</button>
 
         </form>
@@ -35,6 +42,8 @@
                 <button id="button-login">Login</button>
             </form>
         </div>
+
+
     </section>
 </body>
 </html>
