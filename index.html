@@ -1,49 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css" />
     <script src="js/app.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <section id="login-section" onclick="clickLogin()">
+      <la for="signUp-form" id="label-signUp">Sign Up</la    el>
+      <form action="" id="signUp-form">
+        <input
+          id="nameText"
+          required
+          type="text"
+          placeholder="User name"
+          value="Kevin"
+        />
+        <div id="invalid-feedback1">enter a valid data</div>
 
-        <label for="signUp-form" id="label-signUp">Sign Up</label>
-        <form action="" id="signUp-form">
+        <input
+          id="emailText"
+          required
+          type="email"
+          placeholder="Email"
+          value="kdaza@riwio.io"
+        />
+        <div id="invalid-feedback2">enter a valid email</div>
 
-            <input id="nameText" required 
-            type="text" placeholder="User name" value="Kevin">
-            <div id="invalid-feedback1">enter a valid data</div>
-
-            <input id="emailText" required type="email" placeholder="Email" value="kdaza@riwio.io">
-            <div id="invalid-feedback2">enter a valid email</div>
-
-            <input id="passwordText" required type="password" placeholder="password" >
-            <div id="invalid-feedback3">It must to include as minimun 8 characthers and a special one like *,-,0</div>
-
-            <select name="" id="genderSelect">
-                <option value="default" selected disabled> Select your gender</option>
-                <option id="female" value="female">Female</option>
-                <option id="male" value="male">Male</option>
-                <option id="other" value="other">Other</option>
-            </select>
-
-            <button type="button" id="button-singUp" >Sign Up</button>
-
-        </form>
-
-        <div class="login-form-box" id="login-form-box">
-            <label for="login-form">Login</label>
-            <form action="" id="login-form">
-                <input id="nameTextLogin" required type="text" placeholder="Email adress" value="kdaza@riwio.io">
-                <input id="nameTextSingUp" required type="password" placeholder="password">
-                <button id="button-login">Login</button>
-            </form>
+        <input
+          id="passwordText"
+          required
+          type="password"
+          placeholder="password"
+        />
+        <div id="invalid-feedback3">
+          It must to include as minimun 8 characthers and a special one like
+          *,-,0
         </div>
 
+        <select name="" id="genderSelect">
+          <option id ="default" value="default" selected disabled>Select your gender</option>
+          <option id="female" value="female">Female</option>
+          <option id="male" value="male">Male</option>
+          <option id="other" value="other">Other</option>
+        </select>
+        <div id="invalid-feedback4">
+            You should to select a gender
+          </div>
+        <button type="button" id="button-singUp">Sign Up</button>
+      </form>
 
+      <div class="login-form-box" id="login-form-box">
+        <label for="login-form">Login</label>
+        <form action="" id="login-form">
+          <input
+            id="nameTextLogin"
+            required
+            type="text"
+            placeholder="Email adress"
+            value="kdaza@riwio.io"
+          />
+          <input
+            id="nameTextSingUp"
+            required
+            type="password"
+            placeholder="password"
+          />
+          <button id="button-login">Login</button>
+        </form>
+      </div>
     </section>
-</body>
+  </body>
 </html>

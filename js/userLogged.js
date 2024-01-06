@@ -1,19 +1,30 @@
-let lista_usuarios = sessionStorage.getItem('listaUsuarios')
+// let lista_usuarios = sessionStorage.getItem("listaUsuarios");
 
-lista_usuarios = JSON.parse(lista_usuarios);
+// lista_usuarios = JSON.parse(lista_usuarios);
 
-console.log(lista_usuarios);
+// console.log(lista_usuarios);
 
+//
 
-let usuario = sessionStorage.getItem('usuario')
+function genderFunction() {
+  let usuario = sessionStorage.getItem("usuario");
+  usuario = JSON.parse(usuario);
+  console.log(usuario.name);
 
-usuario = JSON.parse(usuario);
+  let saludoHola = document.getElementById("saludoTittle");
 
-console.log(usuario);
-// function genderFunction(){
-    
-//     if(UsergenderSelect.value == "female"){
+  console.log(saludoHola);
 
-//     }
-        
-// }
+  if (usuario.gender == "female") {
+    document.body.style.backgroundColor = "red";
+    saludoHola.innerText += " " + usuario.name;
+  } else if (usuario.gender == "male") {
+    document.body.style.backgroundColor = "blue";
+    saludoHola.innerText += " " + usuario.name;
+  } else if ((usuario.gender = "other")) {
+    document.body.style.backgroundColor = "gray";
+    saludoHola.innerText += " " + usuario.name;
+  }
+}
+
+genderFunction();
