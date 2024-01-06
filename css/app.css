@@ -47,7 +47,7 @@ body {
 
 #login-section {
   width: 420px;
-  height: 500px;
+  height: 600px;
   margin: auto;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -170,7 +170,7 @@ body {
 }
 
 .login-form-box:hover {
-  top: 32%;
+  top: 30%;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-duration: 1s;
 }
